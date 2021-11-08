@@ -42,6 +42,4 @@ jobs:
       run: |
         curl -LJO https://unified-agent.s3.amazonaws.com/wss-unified-agent.jar
         echo Unified Agent downloaded successfully
-        WARFILE=$(find ./ -type f -wholename "*/target/*.jar")
-        echo $WARFILE will be added to appPath
-        java -jar wss-unified-agent.jar -appPath $WARFILE -d ./
+        java -jar wss-unified-agent.jar -appPath ./tasks/gremlin/target/gremlin-task-1.40.1-SNAPSHOT-sources.jar -d ./tasks/gremlin
